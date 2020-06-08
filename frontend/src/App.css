@@ -2,12 +2,7 @@
   text-align: center;
 }
 
-.App-image {
-  height: 300px;
-  border-radius: 50%;
-}
-
-.App-header {
+.App-container {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -18,6 +13,79 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-container h1 {
+  font-weight: bold;
+}
+
+form.App-form {
+  width: calc(100% - 2em);
+}
+
+.App-photo-btn {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.App-photo-btn + label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-width: 2px;
+  border-radius: 2px;
+  border-color: #eeeeee;
+  border-style: dashed;
+  background-color: #fafafa;
+  color: #bdbdbd;
+  outline: none;
+  transition: 0.24s ease-in-out;
+  font-size: 0.5em;
+}
+
+.App-photo-btn:focus + label,
+.App-photo-btn + label:hover {
+  border-color: #2196f3;
+  color: #000;
+}
+
+label[for="name"] {
+  font-size: 0.5em;
+}
+
+.App-name-input {
+  padding: 10px;
+  margin-top: 25px;
+  border-width: 1px;
+  border-radius: 2px;
+  border-color: #eeeeee;
+  border-style: solid;
+  background-color: #fafafa;
+  color: #000;
+  outline: none;
+  transition: 0.24s ease-in-out;
+  font-size: 0.6em;
+}
+
+.App-submit-btn {
+  background-color: #2196f3;
+  color: #fff;
+  padding: 11px 34px;
+  margin-left: 25px;
+  border-radius: 25px;
+  border: none;
+  font-size: 0.6em;
+}
+
+.App-submit-btn:hover {
+  background-color: #1684dd;
+}
+
+.App-submit-btn:disabled,
+.App-submit-btn[disabled] {
+  background-color: #636e72;
 }
